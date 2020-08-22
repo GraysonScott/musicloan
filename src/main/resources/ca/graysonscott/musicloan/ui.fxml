@@ -24,13 +24,11 @@
          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
       </columnResizePolicy>
    </TableView>
-   <HBox alignment="BOTTOM_LEFT" prefHeight="16.0" prefWidth="248.0">
-      <children>
-          <Button onAction="#onLoan" text="LOAN" />
-          <Button onAction="#onReturn" text="RETURN" />
-          <Button onAction="#onDelete" text="DELETE" />
-         <Button mnemonicParsing="false" onAction="#onCreate" text="CREATE" />
-      </children>
-   </HBox>
+    <HBox alignment="BOTTOM_LEFT" prefHeight="16.0" prefWidth="248.0">
+        <Button onAction="#onLoan" text="LOAN"/>
+        <Button onAction="#onReturn" text="RETURN"/>
+        <Button onAction="#onDelete" text="DELETE"/>
+        <Button mnemonicParsing="false" onAction="#onCreate" text="CREATE"/>
+    </HBox>
 
 </VBox>

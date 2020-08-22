@@ -1,7 +1,6 @@
 package ca.graysonscott.musicloan;
 
 import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -36,12 +35,12 @@ public class CatalogueController {
     public void initialize() {
         choiceBox.getItems().setAll(AlbumSearchType.values());
         choiceBox.getSelectionModel().selectFirst();
-        idCol.setCellValueFactory(new PropertyValueFactory<Album,Long>("uniqueID"));
-        nameCol.setCellValueFactory(new PropertyValueFactory<Album, String>("name"));
-        artistCol.setCellValueFactory(new PropertyValueFactory<Album, String>("artist"));
-        genreCol.setCellValueFactory(new PropertyValueFactory<Album, GenreType>("genre"));
-        yearCol.setCellValueFactory(new PropertyValueFactory<Album, String>("publishedYear"));
-        availableCol.setCellValueFactory(new PropertyValueFactory<Album, Boolean>("available"));
+        idCol.setCellValueFactory(new PropertyValueFactory<>("uniqueID"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        artistCol.setCellValueFactory(new PropertyValueFactory<>("artist"));
+        genreCol.setCellValueFactory(new PropertyValueFactory<>("genre"));
+        yearCol.setCellValueFactory(new PropertyValueFactory<>("publishedYear"));
+        availableCol.setCellValueFactory(new PropertyValueFactory<>("available"));
         albumTable.setItems(FXCollections.observableList(catalogue.findAll()));
     }
 
